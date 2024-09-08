@@ -22,6 +22,7 @@ USER_LIST = [
     {"username": "haru", "password": "haru"},
     {"username": "yuta", "password": "yuta"},
     {"username": "pika", "password": "pika"},
+    {"username": "po", "password": "po"},
     {"username": "guest", "password": "guest"},
     # 追加のユーザー情報をここに追加できます
 ]
