@@ -71,10 +71,11 @@ def login(username, password):
 
 if st.session_state.username is None:
     st.title("ログイン")
+    st.write('ver 1.20')
     username = st.text_input("ユーザー名")
     password = st.text_input("パスワード", type="password")
     st.text('ページに来てくれてありがとう')
-    st.text('全部のボタン2回押さないと反応しない')
+    st.text('全部のボタン2回ずつ押さないと反応しない')
     if st.button("ログイン"):
         if login(username, password):
             st.session_state.username = username
