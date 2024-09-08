@@ -21,6 +21,7 @@ USER_LIST = [
     {"username": "yume", "password": "yume"},
     {"username": "haru", "password": "haru"},
     {"username": "yuta", "password": "yuta"},
+    {"username": "pika", "password": "pika"},
     {"username": "guest", "password": "guest"},
     # 追加のユーザー情報をここに追加できます
 ]
