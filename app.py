@@ -7,6 +7,12 @@ import os
 # データベースファイルのパス
 DB_FILE = 'diary_data.db'
 
+# タイムゾーンの設定
+import pytz
+
+# 日本標準時（JST）のタイムゾーンを取得
+japan_tz = pytz.timezone('Asia/Tokyo')
+
 # ユーザー情報をリストで管理
 USER_LIST = [
     {"username": "admin", "password": "0483679993109"},
@@ -85,7 +91,7 @@ else:
     if st.button("保存"):
         if entry:
             new_entry = pd.DataFrame({'username': [st.session_state.username],
-                                      'date': [datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
+                                      'date': [datetime.now(japan_tz).strftime("%Y-%m-%d %H:%M:%S")],
                                       'entry': [entry]})
             conn = sqlite3.connect(DB_FILE)
             new_entry.to_sql('diary', conn, if_exists='append', index=False)
